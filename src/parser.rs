@@ -113,9 +113,6 @@ impl<'a> Parser<'a> {
 
     #[inline]
     fn finish(self) -> ParseResult<()> {
-        if !self.is_empty() {
-            return Err(ParseError::new(ParseErrorKind::ExtraData));
-        }
         Ok(())
     }
 
